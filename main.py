@@ -1,12 +1,12 @@
-import requests 
+import requests
 from bs4 import BeautifulSoup
 
-URL = "https://www.python.org/"
+URL = "https://coinmarketcap.com/"
 
 res = requests.get(URL)
 
-print(res.text)
-
 if res.status_code == 200:
-  soup = BeautifulSoup(res.text, feauture=)
-  
+  soup = BeautifulSoup(res.text, features="html.parser")
+  info = soup.find_all("a", {"href":"/currencies/bitcoin/markets/"})
+  print(info[0])
+ 
