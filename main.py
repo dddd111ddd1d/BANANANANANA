@@ -10,6 +10,10 @@ if res.status_code == 200:
   info = soup.find_all("a", {"href":"/currencies/ethereum/markets/"})
   price = info[0].getText()
   print("ethereum -", price)
+  info2 = soup.find_all("a", {"href":"/currencies/bitcoin/markets/"})
+  price = info2[0].getText()
+  print("bitcoin -", price)
 
   
   
+
