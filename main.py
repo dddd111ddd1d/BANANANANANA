@@ -13,7 +13,13 @@ if res.status_code == 200:
   info2 = soup.find_all("a", {"href":"/currencies/bitcoin/markets/"})
   price = info2[0].getText()
   print("bitcoin -", price)
-
+  info3 = soup.find_all("a", {"href":"/currencies/tether/markets/"})
+  price = info3[0].getText()
+  print("tether -", price)
+  info4 = soup.find_all("a", {"href":"/currencies/bnb/markets/"})
+  price = info4[0].getText()
+  print("bnb -", price)
+ 
   
   
 
