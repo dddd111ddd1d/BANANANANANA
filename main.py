@@ -19,6 +19,9 @@ if res.status_code == 200:
   info4 = soup.find_all("a", {"href":"/currencies/bnb/markets/"})
   price = info4[0].getText()
   print("bnb -", price)
+  info5 = soup.find_all("a", {"href":"/currencies/xrp/markets/"})
+  price = info5[0].getText()
+  print("xpr -", price)
  
   
   
